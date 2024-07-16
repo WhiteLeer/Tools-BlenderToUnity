@@ -528,7 +528,7 @@ class FbxOutput(bpy.types.Operator):
                 self.report({'ERROR'}, f"物体名称非法: {this_name}")
                 continue
 
-            prefix = FbxOutput.export_dirpath + "Assets\Art\MapSources\Architecture\XSJArtEditorTools\胡家豪\\"
+            prefix = FbxOutput.export_dirpath + "Assets\MyTool_Blender\\"
             export_filepath = prefix + create_path_from_name(obj_name, "Fbx")
             if not os.path.exists(export_filepath):
                 os.makedirs(export_filepath)
@@ -610,7 +610,7 @@ class JsonCreator(bpy.types.Operator):
 
         # 根据集合名设置路径
         nowcollection = bpy.context.collection
-        prefix = JsonCreator.export_dirpath + "Assets\Art\MapSources\Architecture\XSJArtEditorTools\胡家豪\\"
+        prefix = JsonCreator.export_dirpath + "Assets\MyTool_Blender\\"
         export_filepath = prefix + nowcollection.name + "\Json"
         if not os.path.exists(export_filepath):
             os.makedirs(export_filepath)
